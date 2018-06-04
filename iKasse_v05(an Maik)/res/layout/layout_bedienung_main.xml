@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.sebe.ikasse.BedienungActivity" >
+
+    <GridView
+        android:id="@+id/gvBedienungSpeisen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linBedienungButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp" />
+
+    <LinearLayout
+        android:id="@+id/linBedienungButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btBedienungTisch"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:onClick="bedienung_tisch_waehlen"
+            android:text="Tisch ###"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBedienungGesamtpreis"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="12,50 €"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btBedienungBestellen"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:onClick="bedienung_bestellen"
+            android:text="Bestellen"
+            android:textColor="#070"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relBedienung_bestellung_warten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tvBedienung_bestellung_warten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/bestellung_erfolgt"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relBedienung_tisch_waehlen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:background="#7000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="#fff"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <TextView
+                android:id="@+id/tvBedienung_tisch_waehlen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Tisch wählen:" />
+
+            <EditText
+                android:id="@+id/etBedienung_tisch_waehlen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvBedienung_tisch_waehlen"
+                android:layout_marginTop="10dp"
+                android:hint="Tischnummer" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btBedienung_tisch_waehlen_fertig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/etBedienung_tisch_waehlen"
+                android:onClick="bedienung_tisch_waehlen_fertig"
+                android:text="Fertig"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#444"
+                android:onClick="bedienung_tisch_waehlen_text_eingeben"
+                android:paddingBottom="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="3dp"
+                android:text="Text eingeben"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

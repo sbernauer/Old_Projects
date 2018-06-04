@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="de.sebe.ikasse.MainActivity" >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvServerLaeuft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/server_laeuft"
+        android:textColor="#090"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btServerUmsaetzeAnzeigen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btServerLogAufrufen"
+        android:layout_alignParentLeft="true"
+        android:onClick="btServerBedienungenAnzeigen"
+        android:text="Bedienungen anzeigen" />
+
+    <Button
+        android:id="@+id/btServerAusschalten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="btServerAusschalten"
+        android:text="Ausschalten" />
+
+    <Button
+        android:id="@+id/btServerLogAufrufen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btServerAusschalten"
+        android:layout_alignParentLeft="true"
+        android:onClick="btServerLogAufrufen"
+        android:text="@string/log_aufrufen" />
+
+    <RelativeLayout
+        android:id="@+id/relServerLog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lvServerLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btServerLogZurueck"
+            android:background="#ccc" >
+        </ListView>
+
+        <Button
+            android:id="@+id/btServerLogZurueck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="btServerLogZurueck"
+            android:text="@string/zurueck"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relServerBedienungenAnzeigen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lvServerBedienungenAnzeigen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btServerBedienungenAnzeigenZurueck"
+            android:background="#ccc" />
+
+        <Button
+            android:id="@+id/btServerBedienungenAnzeigenZurueck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="btServerBedienungenAnzeigenZurueck"
+            android:text="@string/zurueck"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relGridItemBestellungKasse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/tvGridItemBestellungKasseAnzahl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:text="#Anzahl#"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGridItemBestellungKasseBezeichnung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvGridItemBestellungKasseAnzahl"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:text="# Bezeichnung Speise #"
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGridItemBestellungKasseBedienungsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGridItemBestellungKasseBezeichnung"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:text="# Name Bedienung #"
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvGridItemBestellungKasseTisch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGridItemBestellungKasseBedienungsName"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:text="# Tisch #"
+            android:textColor="#000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

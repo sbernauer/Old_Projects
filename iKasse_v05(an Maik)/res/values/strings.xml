@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iKasse</string>
+    <string name="willkommen">Willkommen bei iKasse!\nWie möchtest du fortfahren?</string>
+    <string name="bedienung">Bedienung</string>
+    <string name="kasse">Kasse</string>
+    <string name="server">Server</string>
+    <string name="server_laeuft">SERVER LÄUFT...</string>
+    <string name="ip_einrichtung">So muss das Netzwerk eingerichtet sein:</string>
+    <string name="weiter">Weiter</string>
+    <string name="bedienungen_einrichten">Bedienungen einrichten</string>
+    <string name="speisekarte_einrichten">Speisekarte einrichten</string>
+    <string name="benutzername">Benutzername</string>
+    <string name="passwort">Passwort</string>
+    <string name="anmelden">Anmelden</string>
+    <string name="groß_und_kleinschreibung">Groß- und Kleinschreibung beachten!</string>
+    <string name="anmeldung_erfolgt">Anmeldung bei Server erfolgt, bitte warten...</string>
+    <string name="bestellung_erfolgt">Bestellung erfolgt, bitte warten...</string>
+    <string name="speisekarte_abrufen">Speisekarte wird abgerufen...</string>
+    <string name="anmeldung_nio">Anmeldung beim Server nicht erfolgreich. Bitte überprüfe folgendes:\n1.) Benutzername und Passwort richtig eingegeben (Groß- und Kleinschreibung beachten)\n2.) Verbindung zum Netzwerk\n3.) Dass der Server läuft (wende dich ggf. an einen Administrator)</string>
+    <string name="log">Log</string>
+    <string name="log_aufrufen">Log aufrufen</string>
+    <string name="zurueck">Zurück</string>
+    <string name="hinzufuegen">Hinzufügen</string>
+    <string name="abbrechen">Abbrechen</string>
+    <string name="fertig">Fertig</string>
+    <string name="loeschen">Löschen</string>
+    <string name="farbe_auswaehlen">Farbe auswählen</string>
+    <string name="waehle_farbe_aus">Wähle eine Farbe aus</string>
+    <string name="action_einstellungen">Einstellungen</string>
+
+</resources>

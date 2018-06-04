@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.sebe.ikasse.ServerActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <ListView
+            android:id="@+id/lvServerBedienungen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linServer2Buttons"
+            android:background="#ccc" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/linServer2Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btServerAddBedienungHinzufuegen"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btServerAddBedienungHinzufuegen"
+                android:text="@string/hinzufuegen" />
+
+            <Button
+                android:id="@+id/btServer2Weiter"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="server_2_weiter"
+                android:text="@string/weiter"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relServerAddBedienung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="#fff"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <TextView
+                android:id="@+id/tvServerAddBedienungID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddBedienungID"
+                android:layout_alignParentLeft="true"
+                android:text="ID:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddBedienungID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/tvServerAddBedienungPasswort"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvServerAddBedienungName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddBedienungName"
+                android:layout_alignParentLeft="true"
+                android:text="Name:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddBedienungName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddBedienungID"
+                android:layout_toRightOf="@+id/tvServerAddBedienungPasswort" />
+
+            <TextView
+                android:id="@+id/tvServerAddBedienungPasswort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddBedienungPasswort"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:text="Passwort:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddBedienungPasswort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddBedienungName"
+                android:layout_toRightOf="@+id/tvServerAddBedienungPasswort" />
+
+            <TextView
+                android:id="@+id/tvServerAddBedienungUmsatz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddBedienungUmsatz"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:text="Umsatz:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddBedienungUmsatz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddBedienungPasswort"
+                android:layout_toRightOf="@+id/tvServerAddBedienungPasswort" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddBedienungUmsatz"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btServerAddBedienungAbbrechen"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="btServerAddBedienungAbbrechen"
+                    android:text="@string/abbrechen" />
+
+                <Button
+                    android:id="@+id/btServerAddBedienungFertig"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="btServerAddBedienungFertig"
+                    android:text="@string/hinzufuegen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

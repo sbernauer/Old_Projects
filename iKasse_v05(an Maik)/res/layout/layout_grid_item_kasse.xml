@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relGridItemSpeise"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/tvGridItemKasseAnzahl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:text="#Anzahl#" />
+
+        <TextView
+            android:id="@+id/tvGridItemKasseBezeichnung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvGridItemKasseAnzahl"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:text="Steak mit Pom."
+            android:textColor="#000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvGridItemKasseBedienung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGridItemKasseBezeichnung"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:text="Sebastian"
+            android:textColor="#000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

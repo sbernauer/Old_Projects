@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.sebe.ikasse.ServerActivity" >
+
+    <GridView
+        android:id="@+id/gvServerSpeisekarte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linServer3Buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp" >
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/linServer3Buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btServerAddSpeiseHinzufuegen"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="btServerAddSpeiseHinzufuegen"
+            android:text="@string/hinzufuegen" />
+
+        <Button
+            android:id="@+id/btServer3Weiter"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="server_3_weiter"
+            android:text="@string/weiter"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relServerAddSpeise"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="#fff"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
+
+            <TextView
+                android:id="@+id/tvServerAddSpeiseID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddSpeiseID"
+                android:layout_alignParentLeft="true"
+                android:text="ID:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddSpeiseID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/tvServerAddSpeiseBezeichnung"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvServerAddSpeiseBezeichnung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddSpeiseBezeichnung"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:text="Bezeichnung:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddSpeiseBezeichnung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddSpeiseID"
+                android:layout_toRightOf="@+id/tvServerAddSpeiseBezeichnung" />
+
+            <TextView
+                android:id="@+id/tvServerAddSpeisePreis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddSpeisePreis"
+                android:layout_alignParentLeft="true"
+                android:text="Preis:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddSpeisePreis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddSpeiseBezeichnung"
+                android:layout_toRightOf="@+id/tvServerAddSpeiseBezeichnung"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvServerAddSpeiseIp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etServerAddSpeiseIp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:text="Bestellung bei IP:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etServerAddSpeiseIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddSpeisePreis"
+                android:layout_toRightOf="@+id/tvServerAddSpeiseIp"
+                android:inputType="text" />
+
+            <RelativeLayout
+                android:id="@+id/relServerAddSpeiseFarbe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etServerAddSpeiseIp"
+                android:layout_marginTop="5dp"
+                android:background="#678"
+                android:onClick="linServerAddSpeiseFarbe"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/farbe_auswaehlen"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/btServerAddSpeiseCopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:onClick="btServerAddSpeiseCopy"
+                    android:text="Copy"
+                    android:textColor="#000"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/btServerAddSpeisePaste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:onClick="btServerAddSpeisePaste"
+                    android:text="Paste"
+                    android:textColor="#000"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relServerAddSpeiseFarbe"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btServerAddSpeiseAbbrechen"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="btServerAddSpeiseAbbrechen"
+                    android:text="@string/abbrechen" />
+
+                <Button
+                    android:id="@+id/btServerAddSpeiseFertig"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="btServerAddSpeiseFertig"
+                    android:text="@string/hinzufuegen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
